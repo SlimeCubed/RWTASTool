@@ -1087,6 +1087,9 @@ namespace RWTASTool
                         _hasLoggedError = true;
                         Debug.LogError(new FileFormatException("Invalid analog direction, the input replay file may be corrupted or the mod may be outdated!"));
                     }
+                } else
+                {
+                    analogDir = new Vector2();
                 }
                 if(Repeat)
                 {
@@ -1097,6 +1100,10 @@ namespace RWTASTool
                         _hasLoggedError = true;
                         Debug.LogError(new FileFormatException("Repetition count of 0 encountered, the input replay file may be corrupted or the mod may be outdated!"));
                     }
+                }
+                else
+                {
+                    repCount = 0;
                 }
                 return true;
             }
