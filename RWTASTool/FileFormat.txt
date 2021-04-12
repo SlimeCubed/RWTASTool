@@ -1,0 +1,24 @@
+﻿
+Each input sequence file (.rwi) is made up of zero or more "Input Frames".
+They are formatted in binary.
+
+ -- Input Frame --
+flags: UInt16,
+?analogDirX: Float32,
+?analogDirY: Float32,
+?repeatCount: UInt16
+
+"flags" is a bitmask with the following values:
+Up = 0x0001,
+Down = 0x0002,
+Right = 0x0004,
+Left = 0x0008,
+Grab = 0x0010,
+Throw = 0x0020,
+Jump = 0x0040,
+Map = 0x0080,
+Analog = 0x0100,
+Repeat = 0x0200,
+
+"analogDir" only exists if the "Analog" flag is set
+"repeatCount" only exists if the "Repeat" flag is set

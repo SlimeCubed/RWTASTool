@@ -67,6 +67,10 @@
     <Compile Include="TasIPC.cs" />
     <Compile Include="TasMod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TasUI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FileFormat.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
